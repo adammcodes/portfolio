@@ -1,7 +1,8 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "adamm",
+  "version": "1.0.0",
   "private": true,
+  "author": "Adam Joseph Marsala <adammarsala@hotmail.com>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -34,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.35.2"
   }
 }
