@@ -1,0 +1,55 @@
+@import "../../styles/global.scss";
+
+.About {
+  flex-direction: column;
+  align-items: flex-start;
+  section {
+    max-width: 78rem;
+    .section-title {
+      .title {
+        min-width: 9rem;
+        max-width: 9rem;
+        display: inline-block;
+      }
+    }
+  }
+  .picture {
+    @include theme-border;
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    margin-top: 0.3rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    width: fit-content;
+    img {
+      border-radius: 4px;
+      max-width: 15rem;
+    }
+  }
+  .bio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    p {
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+  .technologies {
+    max-width: 30rem;
+    margin: 0.5rem 0 2rem 0;
+    // background-color: $dark-2;
+    // border-radius: 4px;
+    // padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .About {
+    .section-content {
+      flex-direction: column-reverse;
+    }
+    .picture {
+      margin-right: 0;
+    }
+  }
+}
