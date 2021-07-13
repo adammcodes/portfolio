@@ -43,7 +43,7 @@ const Nav = (props) => {
 
 
   return (
-    <div className={`Nav`}>
+    <div className={`Nav ${props.view === "top" ? "" : "pop"} ${state.showDropdown ? "expand pop" : ""}`}>
 
       {/* LOGO */}
       <div className="nav-left">
@@ -80,7 +80,7 @@ const Nav = (props) => {
             CONTACT
           </div>
         </button>
-        <a href="https://ahhreggi.github.io/docs/resume.pdf" target="_blank" rel="noreferrer">
+        <a href="https://resume.creddle.io/resume/6p0dgqbzwmq" target="_blank" rel="noreferrer">
           <div className="nav-item resume">
             RESUME
           </div>

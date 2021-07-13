@@ -10,10 +10,10 @@ const Hero = (props) => {
     <div className="Hero view">
       <section>
         <div className="greeting code">
-          Hey world, my name is
+          Hey there, my name is
         </div>
         <div className="name">
-          Adam Joseph Marsala
+          Adam Joseph Marsala.
         </div>
         <div className="role">
           I build and design things for the web.

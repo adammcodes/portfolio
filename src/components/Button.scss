@@ -1,0 +1,17 @@
+@import "../styles/global.scss";
+
+.Button {
+  padding: 0.8rem 0.9rem;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  width: fit-content;
+  font-family: $font-code;
+  color: $primary;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  user-select: none;
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-transparent;
+  }
+}
