@@ -15,16 +15,16 @@ const Nav = (props) => {
     showDropdown: false, 
   });
 
-  // useEffect(() => {
-  //   setState({...state, showDropdown: false});
-  // }, [props.position]);
+  useEffect(() => {
+    setState({...state, showDropdown: false});
+  }, [props.position]);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setState({...state, showDropdown: false});
-  //   };
-  //   window.addEventListener("resize", handleResize);
-  // }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setState({...state, showDropdown: false});
+    };
+    window.addEventListener("resize", handleResize);
+  }, []);
 
   const toggleDropdown = () => {
     setState({
@@ -48,7 +48,7 @@ const Nav = (props) => {
       {/* LOGO */}
       <div className="nav-left">
         <a href="/">
-          <img src={logo} alt="Portfolio Logo" />
+          <img class="logo" src={logo} alt="Portfolio Logo" />
         </a>
       </div>
 

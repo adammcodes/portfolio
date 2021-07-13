@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import "./App.scss";
 import Nav from "./Nav";
 
 const App = () => {
