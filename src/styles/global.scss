@@ -1,0 +1,46 @@
+@import "typography";
+@import "variables";
+@import "mixins";
+
+.view {
+  @include fill-viewport;
+  @include flex-center;
+  // border: 1px solid yellow;
+  min-height: 70vh;
+  min-width: 90%;
+  margin-bottom: 5rem;
+}
+
+.code {
+  font-family: $font-code;
+  color: $primary;
+  font-size: 0.9rem;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: $light-5;
+  margin-bottom: 2rem;
+  @include flex-center;
+  justify-content: flex-start;
+  .line {
+    margin-left: 1.3rem;
+    width: 100%;
+    border-bottom: 0.5px solid $dark-4;
+  }
+  img {
+    width: 1.5rem;
+    margin-right: 1rem;
+  }
+}
+
+.section-content {
+  @include flex-center;
+  align-items: flex-start;
+  // border: 1px solid yellow;
+}
+
+p {
+  line-height: 1.5rem;
+}

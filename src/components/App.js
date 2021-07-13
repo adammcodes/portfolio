@@ -1,11 +1,13 @@
-function App() {
+import Nav from "./Nav";
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        Hi, My name is Adam.
-      </header>
+      <Nav />
+      <p>Hello, my name is Adam Joseph Marsala</p>
+
     </div>
   );
-}
+};
 
 export default App;

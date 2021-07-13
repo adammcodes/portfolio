@@ -1,0 +1,63 @@
+@import "styles/global.scss";
+
+html,
+body {
+  scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: overlay;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+  padding: 0;
+  max-height: 20rem;
+}
+
+li {
+  list-style: none;
+  font-size: 0.8rem;
+  width: 13rem;
+  margin: 0.25rem 1rem 0.25rem 0;
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    background-size: contain;
+    margin-right: 0.5rem;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  font-size: 0.9rem;
+}
+
+section {
+  margin: 0 2.5rem;
+  max-width: 80rem;
+}
