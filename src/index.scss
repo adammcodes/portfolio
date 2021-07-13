@@ -9,9 +9,13 @@ body {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  background-color: $dark-1;
+  color: $light-1;
+  font-family: $font-main, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include flex-center;
+  @include custom-scrollbar;
   overflow-y: overlay;
 }
 
@@ -52,8 +56,9 @@ li {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: $font-code, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  color: $primary;
   font-size: 0.9rem;
 }
 
