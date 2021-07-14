@@ -105,7 +105,7 @@ const Projects = () => {
     <div className="Projects view">
       <section>
         <div className="section-title">
-          <img src={arrow} />
+          <img src={arrow} alt=""/>
           Projects
           <div className="line" />
         </div>

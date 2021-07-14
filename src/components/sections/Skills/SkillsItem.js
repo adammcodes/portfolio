@@ -20,7 +20,7 @@ const SkillsItem = (props) => {
     <div className="SkillsItem">
       <div className="title">
         {props.title}
-        <img src={props.img} />
+        <img src={props.img} alt="" />
       </div>
       <div className="description">{props.description}</div>
       <div className="divider" />

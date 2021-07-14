@@ -7,7 +7,7 @@ const Contact = () => {
     <div className="Contact view">
       <section>
         <div className="section-title">
-          <img src={arrow} />
+          <img src={arrow} alt="" />
           Contact
           <div className="line" />
         </div>

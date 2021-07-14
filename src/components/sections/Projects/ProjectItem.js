@@ -23,7 +23,7 @@ const ProjectItem = (props) => {
     >
       <header>
         <div className="title">{props.title}</div>
-        <img src={link} />
+        <img src={link} alt="Link to source code" />
       </header>
       <div className="description">{props.description}</div>
       <ul className="technologies code">{technologies}</ul>

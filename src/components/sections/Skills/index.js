@@ -106,7 +106,7 @@ const Skills = () => {
     <div className="Skills view">
       <section>
         <div className="section-title">
-          <img src={arrow} />
+          <img src={arrow} alt="" />
           Skills
           <div className="line" />
         </div>

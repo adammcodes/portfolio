@@ -7,13 +7,13 @@ const About = () => {
     <div className="About view">
       <section>
         <div className="section-title">
-          <img src={arrow} />
+          <img src={arrow} alt="" />
           <div className="title">About Me</div>
           <div className="line" />
         </div>
         <div className="section-content">
           <div className="picture">
-            <img src={profile} />
+            <img src={profile} alt="Profile"/>
           </div>
           <div className="bio">
             <p>
