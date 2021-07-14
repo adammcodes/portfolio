@@ -10,21 +10,24 @@ const Nav = (props) => {
     scrollTo: PropTypes.func
   };
 
-  // Whether to show font awesome nav icon (hamburger) fa-bars
+  // Hold state of whether to switch nav to dropdown for mobile
   const [state, setState] = useState({
     showDropdown: false, 
   });
 
-  useEffect(() => {
+
+  // If window is resized when mobile nav is dropped down 
+  // Flip state to closed so that there no blur on document
+  const handleResize = () => {
     setState({...state, showDropdown: false});
-  }, [props.position]);
+  };
 
   useEffect(() => {
-    const handleResize = () => {
-      setState({...state, showDropdown: false});
-    };
     window.addEventListener("resize", handleResize);
-  }, []);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    }
+  });
 
   const toggleDropdown = () => {
     setState({
@@ -48,7 +51,7 @@ const Nav = (props) => {
       {/* LOGO */}
       <div className="nav-left">
         <a href="/">
-          <img class="logo" src={logo} alt="Portfolio Logo" />
+          <img className="logo" src={logo} alt="Portfolio Logo" />
         </a>
       </div>
 
@@ -110,7 +113,7 @@ const Nav = (props) => {
           </div>
         </a>
         <a
-          href="#" target="_blank" rel="noreferrer"
+          href="https://resume.creddle.io/resume/6p0dgqbzwmq" target="_blank" rel="noreferrer"
           onClick={() => handleClick()}
         >
           <div className="nav-item resume">
