@@ -1,0 +1,153 @@
+@import "../../../styles/global.scss";
+
+.Projects {
+  section {
+    max-width: 78rem;
+  }
+  .section-title {
+    margin-left: 0.1rem;
+  }
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .ProjectItem {
+    background: $dark-3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-radius: 5px;
+    width: 28%;
+    padding: 1.5rem;
+    height: 12rem;
+    flex-shrink: 1;
+    margin-bottom: 1.7rem;
+    border: 2px solid $dark-1;
+    border-width: 2px 1px 1px 2px;
+    transition: 0.3s;
+    background-blend-mode: luminosity;
+    box-shadow: 0px 0px 100px $dark-transparent inset;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    img {
+      width: 1rem;
+      align-self: flex-end;
+      margin-bottom: 0.4rem;
+      opacity: 0.5;
+    }
+    .title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      transition: 0.3s;
+      color: $light-2;
+    }
+    .description {
+      margin: 1rem 0;
+      height: 2rem;
+    }
+    .technologies {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 6rem;
+      align-content: flex-start;
+      opacity: 0.8;
+      li {
+        width: 7rem;
+        color: $light-2;
+      }
+      span {
+        margin-right: 1rem;
+      }
+    }
+    &:hover {
+      @include theme-border;
+      padding: 1.5rem;
+      cursor: pointer;
+      background-blend-mode: normal;
+      box-shadow: 0px 0px 10px $dark-transparent inset;
+      .title {
+        color: $light-5;
+      }
+      .description {
+        color: $light-3;
+      }
+      .technologies {
+        opacity: 1;
+        li {
+          color: $primary;
+        }
+      }
+      img {
+        opacity: 1;
+      }
+    }
+  }
+  .gh-link {
+    a.code {
+      transition: 0.1s;
+      &:hover {
+        color: $light-5;
+      }
+    }
+    li {
+      width: 15rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Projects {
+    .ProjectItem {
+      width: 43%;
+      height: 12rem;
+      .title {
+        justify-content: flex-start;
+        img {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .Projects {
+    .ProjectItem {
+      width: 92%;
+      height: 9rem;
+      margin-bottom: 1rem;
+      .title {
+        justify-content: flex-start;
+        img {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Projects {
+    .ProjectItem {
+      width: 95%;
+      height: 16rem;
+      margin-bottom: 1rem;
+      .title {
+        justify-content: flex-start;
+        img {
+          margin-left: 1rem;
+        }
+      }
+      .description,
+      .technologies {
+        height: max-content;
+      }
+    }
+  }
+}

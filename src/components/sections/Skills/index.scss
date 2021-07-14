@@ -1,0 +1,141 @@
+@import "../../../styles/global.scss";
+
+.Skills {
+  section {
+    max-width: 78rem;
+  }
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .SkillsItem {
+    background-color: $dark-2;
+    padding: 1.5rem;
+    border-radius: 4px;
+    width: 28%;
+    height: 40rem;
+    flex-shrink: 1;
+    &:nth-child(2) {
+      ul {
+        &.sublist {
+          li {
+            width: max-content;
+          }
+        }
+      }
+    }
+    ul {
+      flex-direction: column;
+      align-content: flex-start;
+      &.list {
+        height: 10rem;
+      }
+      &.sublist {
+        max-height: 20rem;
+      }
+    }
+    li {
+      width: 12rem;
+    }
+    .divider {
+      border-bottom: 1px solid $light-1;
+      margin: 1rem 0;
+    }
+    .title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $light-5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        height: 1.3rem;
+        width: 1.3rem;
+      }
+    }
+    .description {
+      margin: 1rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Skills {
+    section {
+      width: 100%;
+    }
+    .section-content {
+      flex-direction: column;
+    }
+    .SkillsItem {
+      width: 93%;
+      margin-bottom: 1rem;
+      height: fit-content;
+      ul {
+        flex-direction: column;
+        align-content: flex-start;
+        height: fit-content;
+        &.list {
+          max-height: 8rem;
+        }
+        &.sublist {
+          max-height: 11rem;
+        }
+      }
+      .title {
+        justify-content: flex-start;
+        img {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Skills {
+    .SkillsItem {
+      width: 84vw;
+      // width: initial;
+      // max-width: 75vw;
+      ul {
+        &.list {
+          max-height: 10rem;
+        }
+        &.sublist {
+          max-height: 12rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Skills {
+    .SkillsItem {
+      ul {
+        &.list {
+          height: initial;
+          max-height: fit-content;
+        }
+        &.sublist {
+          max-height: fit-content;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .Skills {
+    .SkillsItem {
+      ul {
+        li {
+          font-size: 0.7rem;
+          width: max-content;
+        }
+      }
+    }
+  }
+}
