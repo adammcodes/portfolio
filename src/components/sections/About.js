@@ -31,7 +31,7 @@ const About = () => {
                 <li>Express</li>
                 <li>Ruby</li>
                 <li>PostgreSQL</li>
-                <li>C#</li>
+                <li>HTML and CSS</li>
               </ul>
             </div>
           </div>

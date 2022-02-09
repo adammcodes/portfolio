@@ -13,11 +13,11 @@ const Skills = () => {
       description: "I like building new ideas or recreating existing tools to improve how they work.",
       label: "Languages I've used:",
       list: [
-        "JavaScript (ES6+)",
-        "Ruby",
         "HTML",
         "CSS/Sass",
+        "JavaScript (ES6+)",
         "SQL",
+        "Ruby",
       ],
       sublabel: "Libraries, frameworks & tools:",
       sublist: [
@@ -48,21 +48,21 @@ const Skills = () => {
       description: "I value creating simple, clean, and intuitive designs with a minimalist aesthetic.",
       label: "Experiences I draw from:",
       list: [
-        "Freelancing",
-        "Email Coding",
-        "Content creation",
+        "Email Development",
+        "Web app development & testing",
+        "Building project management tools with the Teamwork® API",
         "Game Design",
-        "Project UI/UX"
+        "Freelancing",
       ],
       sublabel: "Design & content creation tools:",
       sublist: [
-        "Photoshop",
-        "Illustrator",
+        "Adobe Illustrator",
+        "Veeva Vault",
         "Gimp",
         "Tiled",
-        "Piskell"
+        "Piskell",
       ]
-    }, 
+    },
     {
       img: rocket,
       title: "Research & Analysis",
@@ -71,16 +71,16 @@ const Skills = () => {
       list: [
         "Chronic Pain",
         "Pain Neuroscience",
-        "Pulmonary Hypertension", 
+        "Pulmonary Hypertension",
         "Rheumatoid Arthritis",
         "Phantom Limb Pain",
       ],
-      sublabel: "Data Analysis tools & constructs:",
+      sublabel: "Data Analysis Tools",
       sublist: [
+        "Salesforce CRM",
+        "Google Analytics",
+        "Microsoft Excel",
         "SPSS",
-        "Logistical Regression",
-        "Linear Regression",
-        "Odds Ratios"
       ]
     }, 
 

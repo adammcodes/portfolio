@@ -13,7 +13,7 @@ const Contact = () => {
         </div>
         <div className="section-content">
           <p>
-            I&apos;m currently seeking new opportunities so if you&apos;d like to chat or just want to say hello, send me an e-mail and I&apos;ll get back to you as soon as possible!
+            If you&apos;d like to chat or just want to say hello, send me an e-mail and I&apos;ll get back to you as soon as possible!
           </p>
           <div className="links">
             <a className="button" href="mailto:adammarsala@hotmail.com">
