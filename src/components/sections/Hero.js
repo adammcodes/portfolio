@@ -23,7 +23,7 @@ const Hero = (props) => {
             I&apos;m an avid gamer, runner, and full stack developer based in Toronto with a background in health care as a Registered Physiotherapist.
           </p>
           <p>
-            Currently seeking employment opportunities, so feel free to reach out :)
+            Right now, I am working full-time as a web developer at a medical marketing agency.
           </p>
         </div>
         <Button text="Say Hello" onClick={() => props.scrollToContact()} />

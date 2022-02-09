@@ -49,8 +49,8 @@ const Skills = () => {
       label: "Experiences I draw from:",
       list: [
         "Email Development",
-        "Web app development & testing",
-        "Building project management tools with the Teamwork® API",
+        "Web Development",
+        "Teamwork® Developer API",
         "Game Design",
         "Freelancing",
       ],
