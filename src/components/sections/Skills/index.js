@@ -10,23 +10,27 @@ const Skills = () => {
     {
       img: development,
       title: "Development",
-      description: "I like building new ideas or recreating existing tools to improve how they work.",
-      label: "Languages I've used:",
+      description:
+        "I like building from new ideas or recreating existing tools to improve how they work.",
+      label: "Programming Languages:",
       list: [
         "HTML",
-        "CSS/Sass",
-        "JavaScript (ES6+)",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
         "SQL",
         "Ruby",
+        "Python",
       ],
       sublabel: "Libraries, frameworks & tools:",
       sublist: [
         "Node.js",
+        "Next.js",
+        "Tailwind CSS",
+        "React",
         "Phaser.js",
         "MJML",
         "Express",
-        "React",
-        "Axios",
         "jQuery",
         "PostgreSQL",
         "Rails",
@@ -38,52 +42,38 @@ const Skills = () => {
         "Cypress",
         "Storybook",
         "Git",
-        "Heroku",
         "Netlify",
-      ]
+      ],
     },
     {
       img: design,
       title: "Creative",
-      description: "I value creating simple, clean, and intuitive designs with a minimalist aesthetic.",
+      description:
+        "I value creating simple, clean, and intuitive designs with a minimalist aesthetic.",
       label: "Experiences I draw from:",
       list: [
         "Email Development",
         "Web Development",
-        "Teamwork® Developer API",
         "Game Design",
         "Freelancing",
       ],
       sublabel: "Design & content creation tools:",
-      sublist: [
-        "Adobe Illustrator",
-        "Veeva Vault",
-        "Gimp",
-        "Tiled",
-        "Piskell",
-      ]
+      sublist: ["Adobe Illustrator", "Figma", "Gimp", "Tiled", "Piskell"],
     },
     {
       img: rocket,
-      title: "Research & Analysis",
-      description: "I am driven by discovery and applying new insights into my work.",
-      label: "Research topics I have presented:",
+      title: "Content Management",
+      description:
+        "I love figuring out the best ways to automate things and make work easier for my team.",
+      label: "CRM tool I have experience in:",
       list: [
-        "Chronic Pain",
-        "Pain Neuroscience",
-        "Pulmonary Hypertension",
-        "Rheumatoid Arthritis",
-        "Phantom Limb Pain",
+        "SFMC (Salesforce Marketing Cloud)",
+        "Veeva Vault/Veeva CRM",
+        "HubSpot",
       ],
-      sublabel: "Data Analysis Tools",
-      sublist: [
-        "Salesforce CRM",
-        "Google Analytics",
-        "Microsoft Excel",
-        "SPSS",
-      ]
-    }, 
-
+      sublabel: "Project Management Tools",
+      sublist: ["Teamwork", "Notion"],
+    },
   ];
 
   // Parse skills/experiences into SkillItem components
@@ -91,7 +81,7 @@ const Skills = () => {
     return (
       <SkillsItem
         key={index}
-        img ={skill.img}
+        img={skill.img}
         title={skill.title}
         description={skill.description}
         label={skill.label}
@@ -110,9 +100,7 @@ const Skills = () => {
           Skills
           <div className="line" />
         </div>
-        <div className="section-content">
-          {skillItems}
-        </div>
+        <div className="section-content">{skillItems}</div>
       </section>
     </div>
   );

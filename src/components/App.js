@@ -9,8 +9,8 @@ import Contact from "./sections/Contact";
 
 const App = () => {
   const [state, setState] = useState({
-    view: "top", // marks top position window scroll 
-    position: 0 // tracks y position of window scroll
+    view: "top", // marks top position window scroll
+    position: 0, // tracks y position of window scroll
   });
 
   // React will hold DOM state of portfolio sections in refs
@@ -19,7 +19,7 @@ const App = () => {
     about: useRef(null),
     skills: useRef(null),
     projects: useRef(null),
-    contact: useRef(null)
+    contact: useRef(null),
   };
 
   const scrollTo = (ref) => {
@@ -29,13 +29,13 @@ const App = () => {
   const handleScroll = () => {
     // Hold Y scroll position of window
     const pos = window.pageYOffset;
-    let view; 
+    let view;
     if (pos < 10) {
       // consider y offset of less than 10 the top
       view = "top";
     }
     // track the Y scroll position in state
-    setState({...state, view: view, position: pos});
+    setState({ ...state, view: view, position: pos });
   };
 
   useEffect(() => {
@@ -44,32 +44,30 @@ const App = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    }
+    };
   });
 
   return (
     <div className="App">
-      <Nav 
-        view={state.view}
-        position={state.position}
-        scrollTo={scrollTo}
-      />
+      <Nav view={state.view} position={state.position} scrollTo={scrollTo} />
       <Hero scrollToContact={() => scrollTo("contact")} />
       <div id="about" ref={refs.about} />
       <About />
-      <div id="skills" ref={refs.skills} /> 
+      <div id="skills" ref={refs.skills} />
       <Skills />
       <div id="projects" ref={refs.projects} />
       <Projects />
       <div id="contact" ref={refs.contact} />
       <Contact />
-      <div className={`scroller ${state.position < 400 ? "hide" : ""}`} onClick={() => window.scrollTo({top: 0})}>
+      <div
+        className={`scroller ${state.position < 400 ? "hide" : ""}`}
+        onClick={() => window.scrollTo({ top: 0 })}
+      >
         <div className="arrow" />
       </div>
       <footer>
-        &copy; <span>2021 Adam Joseph Marsala</span>
+        &copy; <span>2023 Adam Marsala</span>
       </footer>
-
     </div>
   );
 };
