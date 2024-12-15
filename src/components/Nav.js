@@ -83,11 +83,6 @@ const Nav = (props) => {
             CONTACT
           </div>
         </button>
-        // <a href="https://resume.creddle.io/resume/6p0dgqbzwmq" target="_blank" rel="noreferrer">
-        //   <div className="nav-item resume">
-        //     RESUME
-        //   </div>
-        // </a>
       </div>
 
       {/* Mobile view nav bar */}
