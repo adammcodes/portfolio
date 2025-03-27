@@ -2,6 +2,7 @@
   "name": "adamm",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "author": "Adam Joseph Marsala <adammarsala@hotmail.com>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
