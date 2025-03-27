@@ -4,11 +4,11 @@
   "private": true,
   "author": "Adam Joseph Marsala <adammarsala@hotmail.com>",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -38,8 +38,8 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.14",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.2.1",
     "sass": "^1.35.2",
     "typescript": "^5.8.2",

@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
 import "./Hero.scss";
 import Button from "../Button";
 
-const Hero = (props) => {
-  Hero.propTypes = {
-    scrollToContact: PropTypes.func,
-  };
+interface HeroProps {
+  scrollToContact: () => void;
+}
+
+const Hero = ({ scrollToContact }: HeroProps) => {
   return (
     <div className="Hero view">
       <section>
@@ -19,7 +19,7 @@ const Hero = (props) => {
             marketing agency.
           </p>
         </div>
-        <Button text="Say Hello" onClick={() => props.scrollToContact()} />
+        <Button text="Say Hello" onClick={scrollToContact} />
       </section>
     </div>
   );

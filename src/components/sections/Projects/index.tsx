@@ -11,8 +11,16 @@ import shoppies from "../../../images/projects/shoppies.png";
 import shaiandadam from "../../../images/projects/shaiandadam.png";
 import pokemechanics from "../../../images/projects/pokemechanics.png";
 
+interface ProjectContent {
+  title: string;
+  description: string;
+  technologies: string[];
+  project: string;
+  background: string;
+}
+
 const Projects = () => {
-  const projectContent = [
+  const projectContent: ProjectContent[] = [
     {
       title: "Pokémechanics",
       description: "Pokédex resource for all main-series Pokemon games.",
@@ -91,6 +99,7 @@ const Projects = () => {
       background: tinyapp,
     },
   ];
+
   const projects = projectContent.map((project, index) => {
     return (
       <ProjectItem
@@ -103,6 +112,7 @@ const Projects = () => {
       />
     );
   });
+
   return (
     <div className="Projects view">
       <section>

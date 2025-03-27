@@ -5,8 +5,18 @@ import development from "../../../images/development.png";
 import design from "../../../images/design.png";
 import rocket from "../../../images/rocket.png";
 
+interface SkillContent {
+  img: string;
+  title: string;
+  description: string;
+  label: string;
+  list: string[];
+  sublabel: string;
+  sublist: string[];
+}
+
 const Skills = () => {
-  const skillsContent = [
+  const skillsContent: SkillContent[] = [
     {
       img: development,
       title: "Development",
