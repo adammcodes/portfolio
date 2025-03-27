@@ -7,32 +7,31 @@ const Nav = (props) => {
   Nav.propTypes = {
     view: PropTypes.string,
     position: PropTypes.number,
-    scrollTo: PropTypes.func
+    scrollTo: PropTypes.func,
   };
 
   // Hold state of whether to switch nav to dropdown for mobile
   const [state, setState] = useState({
-    showDropdown: false, 
+    showDropdown: false,
   });
 
-
-  // If window is resized when mobile nav is dropped down 
+  // If window is resized when mobile nav is dropped down
   // Flip state to closed so that there no blur on document
   const handleResize = () => {
-    setState({...state, showDropdown: false});
+    setState({ ...state, showDropdown: false });
   };
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
-    }
+    };
   });
 
   const toggleDropdown = () => {
     setState({
       ...state,
-      showDropdown: !state.showDropdown
+      showDropdown: !state.showDropdown,
     });
   };
 
@@ -42,12 +41,14 @@ const Nav = (props) => {
       // close the mobile nav menu if is open
       toggleDropdown();
     }
-  }
-
+  };
 
   return (
-    <div className={`Nav ${props.view === "top" ? "" : "pop"} ${state.showDropdown ? "expand pop" : ""}`}>
-
+    <div
+      className={`Nav ${props.view === "top" ? "" : "pop"} ${
+        state.showDropdown ? "expand pop" : ""
+      }`}
+    >
       {/* LOGO */}
       <div className="nav-left">
         <a href="/">
@@ -64,66 +65,97 @@ const Nav = (props) => {
       {/* Desktop view nav bar */}
       <div className="nav-right">
         <button onClick={() => props.scrollTo("about")}>
-          <div className={`nav-item about ${props.view === "about" ? "selected" : ""}`}>
+          <div
+            className={`nav-item about ${
+              props.view === "about" ? "selected" : ""
+            }`}
+          >
             ABOUT
           </div>
         </button>
         <button onClick={() => props.scrollTo("skills")}>
-          <div className={`nav-item skills ${props.view === "skills" ? "selected" : ""}`}>
+          <div
+            className={`nav-item skills ${
+              props.view === "skills" ? "selected" : ""
+            }`}
+          >
             SKILLS
           </div>
         </button>
         <button onClick={() => props.scrollTo("projects")}>
-          <div className={`nav-item projects ${props.view === "projects" ? "selected" : ""}`}>
+          <div
+            className={`nav-item projects ${
+              props.view === "projects" ? "selected" : ""
+            }`}
+          >
             PROJECTS
           </div>
         </button>
         <button onClick={() => props.scrollTo("contact")}>
-          <div className={`nav-item contact ${props.view === "contact" ? "selected" : ""}`}>
+          <div
+            className={`nav-item contact ${
+              props.view === "contact" ? "selected" : ""
+            }`}
+          >
             CONTACT
           </div>
         </button>
-        <a href="https://resume.creddle.io/resume/6p0dgqbzwmq" target="_blank" rel="noreferrer">
+        {/* <a href="https://resume.creddle.io/resume/6p0dgqbzwmq" target="_blank" rel="noreferrer">
           <div className="nav-item resume">
             RESUME
           </div>
-        </a>
+        </a> */}
       </div>
 
       {/* Mobile view nav bar */}
       <div className="nav-dropdown">
         <a href="#about" onClick={() => handleClick()}>
-          <div className={`nav-item about ${props.view === "about" ? "selected" : ""}`}>
+          <div
+            className={`nav-item about ${
+              props.view === "about" ? "selected" : ""
+            }`}
+          >
             ABOUT
           </div>
         </a>
         <a href="#skills" onClick={() => handleClick()}>
-          <div className={`nav-item skills ${props.view === "skills" ? "selected" : ""}`}>
+          <div
+            className={`nav-item skills ${
+              props.view === "skills" ? "selected" : ""
+            }`}
+          >
             SKILLS
           </div>
         </a>
         <a href="#projects" onClick={() => handleClick()}>
-          <div className={`nav-item projects ${props.view === "projects" ? "selected" : ""}`}>
+          <div
+            className={`nav-item projects ${
+              props.view === "projects" ? "selected" : ""
+            }`}
+          >
             PROJECTS
           </div>
         </a>
         <a href="#contact" onClick={() => handleClick()}>
-          <div className={`nav-item contact ${props.view === "contact" ? "selected" : ""}`}>
+          <div
+            className={`nav-item contact ${
+              props.view === "contact" ? "selected" : ""
+            }`}
+          >
             CONTACT
           </div>
         </a>
         <a
-          href="https://resume.creddle.io/resume/6p0dgqbzwmq" target="_blank" rel="noreferrer"
+          href="https://resume.creddle.io/resume/6p0dgqbzwmq"
+          target="_blank"
+          rel="noreferrer"
           onClick={() => handleClick()}
         >
-          <div className="nav-item resume">
-            RESUME
-          </div>
+          <div className="nav-item resume">RESUME</div>
         </a>
       </div>
-
     </div>
-  )
+  );
 };
 
-export default Nav; 
+export default Nav;

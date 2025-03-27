@@ -19,7 +19,7 @@ const Contact = () => {
             </a>
             <div className="icons">
               <a
-                href="https://github.com/MagicMark5"
+                href="https://github.com/adammcodes"
                 target="_blank"
                 rel="noreferrer"
               >
