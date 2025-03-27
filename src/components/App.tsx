@@ -7,35 +7,47 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 
+interface AppState {
+  view: "top" | string;
+  position: number;
+}
+
+interface Refs {
+  about: React.RefObject<HTMLDivElement | null>;
+  skills: React.RefObject<HTMLDivElement | null>;
+  projects: React.RefObject<HTMLDivElement | null>;
+  contact: React.RefObject<HTMLDivElement | null>;
+}
+
 const App = () => {
-  const [state, setState] = useState({
+  const [state, setState] = useState<AppState>({
     view: "top", // marks top position window scroll
     position: 0, // tracks y position of window scroll
   });
 
   // React will hold DOM state of portfolio sections in refs
   // So we can use scrollIntoView with its `.current` property
-  const refs = {
-    about: useRef(null),
-    skills: useRef(null),
-    projects: useRef(null),
-    contact: useRef(null),
+  const refs: Refs = {
+    about: useRef<HTMLDivElement>(null),
+    skills: useRef<HTMLDivElement>(null),
+    projects: useRef<HTMLDivElement>(null),
+    contact: useRef<HTMLDivElement>(null),
   };
 
-  const scrollTo = (ref) => {
-    refs[ref].current.scrollIntoView();
+  const scrollTo = (ref: keyof Refs) => {
+    refs[ref].current?.scrollIntoView();
   };
 
   const handleScroll = () => {
     // Hold Y scroll position of window
     const pos = window.pageYOffset;
-    let view;
+    let view: string = "top";
     if (pos < 10) {
       // consider y offset of less than 10 the top
       view = "top";
     }
     // track the Y scroll position in state
-    setState({ ...state, view: view, position: pos });
+    setState({ ...state, view, position: pos });
   };
 
   useEffect(() => {

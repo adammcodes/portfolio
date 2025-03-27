@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import "./Nav.scss";
 import logo from "../images/logo.png";
 
-const Nav = (props) => {
-  Nav.propTypes = {
-    view: PropTypes.string,
-    position: PropTypes.number,
-    scrollTo: PropTypes.func,
-  };
+interface NavProps {
+  view: string;
+  position: number;
+  scrollTo: (section: string) => void;
+}
 
+interface NavState {
+  showDropdown: boolean;
+}
+
+const Nav = ({ view, position, scrollTo }: NavProps) => {
   // Hold state of whether to switch nav to dropdown for mobile
-  const [state, setState] = useState({
+  const [state, setState] = useState<NavState>({
     showDropdown: false,
   });
 
@@ -45,7 +48,7 @@ const Nav = (props) => {
 
   return (
     <div
-      className={`Nav ${props.view === "top" ? "" : "pop"} ${
+      className={`Nav ${view === "top" ? "" : "pop"} ${
         state.showDropdown ? "expand pop" : ""
       }`}
     >
@@ -64,65 +67,52 @@ const Nav = (props) => {
 
       {/* Desktop view nav bar */}
       <div className="nav-right">
-        <button onClick={() => props.scrollTo("about")}>
+        <button onClick={() => scrollTo("about")}>
           <div
-            className={`nav-item about ${
-              props.view === "about" ? "selected" : ""
-            }`}
+            className={`nav-item about ${view === "about" ? "selected" : ""}`}
           >
             ABOUT
           </div>
         </button>
-        <button onClick={() => props.scrollTo("skills")}>
+        <button onClick={() => scrollTo("skills")}>
           <div
-            className={`nav-item skills ${
-              props.view === "skills" ? "selected" : ""
-            }`}
+            className={`nav-item skills ${view === "skills" ? "selected" : ""}`}
           >
             SKILLS
           </div>
         </button>
-        <button onClick={() => props.scrollTo("projects")}>
+        <button onClick={() => scrollTo("projects")}>
           <div
             className={`nav-item projects ${
-              props.view === "projects" ? "selected" : ""
+              view === "projects" ? "selected" : ""
             }`}
           >
             PROJECTS
           </div>
         </button>
-        <button onClick={() => props.scrollTo("contact")}>
+        <button onClick={() => scrollTo("contact")}>
           <div
             className={`nav-item contact ${
-              props.view === "contact" ? "selected" : ""
+              view === "contact" ? "selected" : ""
             }`}
           >
             CONTACT
           </div>
         </button>
-        {/* <a href="https://resume.creddle.io/resume/6p0dgqbzwmq" target="_blank" rel="noreferrer">
-          <div className="nav-item resume">
-            RESUME
-          </div>
-        </a> */}
       </div>
 
       {/* Mobile view nav bar */}
-      <div className="nav-dropdown">
+      <div className={`nav-dropdown ${state.showDropdown ? "show" : ""}`}>
         <a href="#about" onClick={() => handleClick()}>
           <div
-            className={`nav-item about ${
-              props.view === "about" ? "selected" : ""
-            }`}
+            className={`nav-item about ${view === "about" ? "selected" : ""}`}
           >
             ABOUT
           </div>
         </a>
         <a href="#skills" onClick={() => handleClick()}>
           <div
-            className={`nav-item skills ${
-              props.view === "skills" ? "selected" : ""
-            }`}
+            className={`nav-item skills ${view === "skills" ? "selected" : ""}`}
           >
             SKILLS
           </div>
@@ -130,7 +120,7 @@ const Nav = (props) => {
         <a href="#projects" onClick={() => handleClick()}>
           <div
             className={`nav-item projects ${
-              props.view === "projects" ? "selected" : ""
+              view === "projects" ? "selected" : ""
             }`}
           >
             PROJECTS
@@ -139,7 +129,7 @@ const Nav = (props) => {
         <a href="#contact" onClick={() => handleClick()}>
           <div
             className={`nav-item contact ${
-              props.view === "contact" ? "selected" : ""
+              view === "contact" ? "selected" : ""
             }`}
           >
             CONTACT
