@@ -1,5 +1,6 @@
 import arrow from "../../../images/arrow.png";
 import SkillsItem from "./SkillsItem";
+import "./Skills.css";
 import development from "../../../images/development.png";
 import design from "../../../images/design.png";
 import rocket from "../../../images/rocket.png";
@@ -22,36 +23,20 @@ const Skills = () => {
       description:
         "I like building from new ideas or recreating existing tools to improve how they work.",
       label: "Programming Languages:",
-      list: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript",
-        "SQL",
-        "Ruby",
-        "Python",
-      ],
+      list: ["HTML", "CSS", "JavaScript", "TypeScript", "SQL", "Python", "C"],
       sublabel: "Libraries, frameworks & tools:",
       sublist: [
         "Node.js",
         "Next.js",
-        "Tailwind CSS",
+        "Tailwind",
         "React",
         "Phaser.js",
         "MJML",
         "Express",
-        "jQuery",
         "PostgreSQL",
-        "Rails",
-        "Bootstrap",
-        "Material-UI",
-        "Mocha",
-        "Chai",
         "Jest",
-        "Cypress",
-        "Storybook",
+        "jQuery",
         "Git",
-        "Netlify",
       ],
     },
     {
@@ -63,7 +48,7 @@ const Skills = () => {
       list: [
         "Email Development",
         "Web Development",
-        "Game Design",
+        "Game Development",
         "Freelancing",
       ],
       sublabel: "Design & content creation tools:",

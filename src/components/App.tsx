@@ -6,6 +6,8 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 
+import "./App.css";
+
 interface AppState {
   view: "top" | string;
   position: number;
@@ -40,14 +42,14 @@ const App = () => {
 
   const handleScroll = () => {
     // Hold Y scroll position of window
-    const pos = window.pageYOffset;
-    let view: string = "top";
+    const pos = window.scrollY;
+    let view;
     if (pos < 10) {
       // consider y offset of less than 10 the top
       view = "top";
     }
     // track the Y scroll position in state
-    setState({ ...state, view, position: pos });
+    setState({ ...state, view: view as string, position: pos });
   };
 
   useEffect(() => {

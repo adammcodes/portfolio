@@ -1,0 +1,72 @@
+.Hero {
+  padding-top: 0;
+}
+
+.Hero section {
+  margin-top: 8rem;
+}
+
+.Hero .greeting {
+  margin-bottom: 0.5rem;
+  margin-left: 0.1rem;
+}
+
+.Hero .name {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--light-5);
+  margin-bottom: 0.5rem;
+}
+
+.Hero .role {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.Hero .description {
+  margin: 1rem 0;
+  max-width: 42rem;
+}
+
+.Hero .description p {
+  margin: 0.5rem 0.1rem;
+}
+
+.Hero .Button {
+  margin: 0.5rem 0.2rem;
+}
+
+.Hero a.hero-contact {
+  border: 1px solid red;
+  cursor: crosshair;
+}
+
+@media screen and (max-width: 1024px) {
+  .Hero .name {
+    font-size: 3rem;
+  }
+
+  .Hero .role {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Hero .name {
+    font-size: 2.7rem;
+  }
+
+  .Hero .role {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 638px) {
+  .Hero .name {
+    font-size: 2rem;
+  }
+
+  .Hero .role {
+    font-size: 1.6rem;
+  }
+}

@@ -1,4 +1,4 @@
-import "./Hero.scss";
+import "./Hero.css";
 import Button from "../Button";
 
 interface HeroProps {

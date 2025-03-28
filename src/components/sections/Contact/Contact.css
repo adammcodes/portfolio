@@ -1,0 +1,89 @@
+.Contact {
+  min-height: initial;
+  background-color: var(--dark-3);
+  padding: 3rem 0;
+  width: 100vw;
+  margin: 4rem 2rem 0 2rem;
+}
+
+.Contact section {
+  max-width: 37rem;
+}
+
+.Contact .section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact .section-content {
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 8px;
+  border-width: 2px 1px 1px 2px;
+}
+
+.Contact .section-content p {
+  margin: 0 0 1rem 0;
+}
+
+.Contact .section-content .links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.Contact .section-content .links .button {
+  margin: 1rem 1rem 1rem 0;
+}
+
+.Contact .section-content .links .icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact .section-content .links .icons a {
+  height: fit-content;
+  color: var(--light-1);
+  margin-left: 1rem;
+  border-radius: 100%;
+}
+
+.Contact .section-content .links .icons a:nth-child(1) {
+  margin-left: 0;
+}
+
+.Contact .section-content .links .icons .fa {
+  background-color: var(--dark-2);
+  padding: 1rem;
+  border-radius: 100%;
+  height: 0.9rem;
+  width: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Contact .section-content .links .icons .fa:hover {
+  background-color: var(--dark-1);
+  color: var(--light-5);
+}
+
+@media screen and (max-width: 368px) {
+  .Contact {
+    background-color: transparent;
+  }
+
+  .Contact section {
+    border-color: transparent;
+    padding: 0;
+  }
+}

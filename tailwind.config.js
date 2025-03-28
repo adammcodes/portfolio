@@ -34,5 +34,19 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".theme-border": {
+          "border-color":
+            "var(--light-1) var(--primary) var(--primary) var(--light-1)",
+          "border-style": "dashed solid solid dashed",
+          "border-width": "2px 1px 1px 2px",
+          "border-radius": "4px",
+          padding: "1rem",
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 };

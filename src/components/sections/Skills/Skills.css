@@ -1,0 +1,136 @@
+.Skills section {
+  max-width: 78rem;
+}
+
+.Skills .section-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Skills .SkillsItem {
+  background-color: #101225;
+  padding: 1.5rem;
+  border-radius: 4px;
+  width: 28%;
+  height: 40rem;
+  flex-shrink: 1;
+}
+
+.Skills .SkillsItem:nth-child(2) ul.sublist li {
+  width: max-content;
+}
+
+.Skills .SkillsItem ul {
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.Skills .SkillsItem ul.list {
+  height: 10rem;
+}
+
+.Skills .SkillsItem ul.sublist {
+  max-height: 20rem;
+}
+
+.Skills .SkillsItem li {
+  width: 12rem;
+}
+
+.Skills .SkillsItem .divider {
+  border-bottom: 1px solid #8a8e9e;
+  margin: 1rem 0;
+}
+
+.Skills .SkillsItem .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Skills .SkillsItem .title img {
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+.Skills .SkillsItem .description {
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .Skills section {
+    width: 100%;
+  }
+
+  .Skills .section-content {
+    flex-direction: column;
+  }
+
+  .Skills .SkillsItem {
+    width: 93%;
+    margin-bottom: 1rem;
+    height: fit-content;
+  }
+
+  .Skills .SkillsItem ul {
+    flex-direction: column;
+    align-content: flex-start;
+    height: fit-content;
+  }
+
+  .Skills .SkillsItem ul.list {
+    max-height: 8rem;
+  }
+
+  .Skills .SkillsItem ul.sublist {
+    max-height: 11rem;
+  }
+
+  .Skills .SkillsItem .title {
+    justify-content: flex-start;
+  }
+
+  .Skills .SkillsItem .title img {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Skills .SkillsItem {
+    width: 84vw;
+  }
+
+  .Skills .SkillsItem ul.list {
+    max-height: 10rem;
+  }
+
+  .Skills .SkillsItem ul.sublist {
+    max-height: 12rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Skills .section-title {
+    padding: 0 1.5rem;
+  }
+
+  .Skills .SkillsItem ul.list {
+    height: initial;
+    max-height: fit-content;
+  }
+
+  .Skills .SkillsItem ul.sublist {
+    max-height: fit-content;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .Skills .SkillsItem ul li {
+    font-size: 0.7rem;
+    width: max-content;
+  }
+}

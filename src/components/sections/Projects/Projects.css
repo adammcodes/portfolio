@@ -1,0 +1,170 @@
+.Projects section {
+  max-width: 78rem;
+}
+
+.Projects .section-title {
+  margin-left: 0.1rem;
+}
+
+.Projects .section-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Projects .ProjectItem {
+  background: var(--dark-3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-radius: 5px;
+  width: 28%;
+  padding: 1.5rem;
+  height: 12rem;
+  flex-shrink: 1;
+  margin-bottom: 1.7rem;
+  border: 2px solid var(--dark-1);
+  border-width: 2px 1px 1px 2px;
+  transition: 0.3s;
+  background-blend-mode: luminosity;
+  box-shadow: 0px 0px 100px var(--dark-transparent) inset;
+}
+
+.Projects .ProjectItem header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Projects .ProjectItem img {
+  width: 1rem;
+  align-self: flex-end;
+  margin-bottom: 0.4rem;
+  opacity: 0.5;
+}
+
+.Projects .ProjectItem .title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: 0.3s;
+  color: var(--light-2);
+}
+
+.Projects .ProjectItem .description {
+  margin: 1rem 0;
+  height: 2rem;
+}
+
+.Projects .ProjectItem .technologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 6rem;
+  align-content: flex-start;
+  opacity: 0.8;
+}
+
+.Projects .ProjectItem .technologies li {
+  width: 7rem;
+  color: var(--light-2);
+}
+
+.Projects .ProjectItem .technologies span {
+  margin-right: 1rem;
+}
+
+.Projects .ProjectItem:hover {
+  border-color: var(--light-1) var(--primary) var(--primary) var(--light-1);
+  border-style: dashed solid solid dashed;
+  border-width: 2px 1px 1px 2px;
+  border-radius: 4px;
+  padding: 1.5rem;
+  cursor: pointer;
+  background-blend-mode: normal;
+  box-shadow: 0px 0px 10px var(--dark-transparent) inset;
+}
+
+.Projects .ProjectItem:hover .title {
+  color: var(--light-5);
+}
+
+.Projects .ProjectItem:hover .description {
+  color: var(--light-3);
+}
+
+.Projects .ProjectItem:hover .technologies {
+  opacity: 1;
+}
+
+.Projects .ProjectItem:hover .technologies li {
+  color: var(--primary);
+}
+
+.Projects .ProjectItem:hover img {
+  opacity: 1;
+}
+
+.Projects .gh-link a.code {
+  transition: 0.1s;
+}
+
+.Projects .gh-link a.code:hover {
+  color: var(--light-5);
+}
+
+.Projects .gh-link li {
+  width: 15rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .Projects .ProjectItem {
+    width: 43%;
+    height: 12rem;
+  }
+
+  .Projects .ProjectItem .title {
+    justify-content: flex-start;
+  }
+
+  .Projects .ProjectItem .title img {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .Projects .ProjectItem {
+    width: 92%;
+    height: 9rem;
+    margin-bottom: 1rem;
+  }
+
+  .Projects .ProjectItem .title {
+    justify-content: flex-start;
+  }
+
+  .Projects .ProjectItem .title img {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Projects .ProjectItem {
+    width: 95%;
+    height: 16rem;
+    margin-bottom: 1rem;
+  }
+
+  .Projects .ProjectItem .title {
+    justify-content: flex-start;
+  }
+
+  .Projects .ProjectItem .title img {
+    margin-left: 1rem;
+  }
+
+  .Projects .ProjectItem .description,
+  .Projects .ProjectItem .technologies {
+    height: max-content;
+  }
+}

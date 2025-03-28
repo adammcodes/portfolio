@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./Contact.css";
 import arrow from "../../../images/arrow.png";
 import Button from "../../Button";
 

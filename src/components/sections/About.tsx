@@ -1,4 +1,4 @@
-import "./About.scss";
+import "./About.css";
 import arrow from "../../images/arrow.png";
 import profile from "../../images/profile.png";
 
@@ -12,7 +12,7 @@ const About = () => {
           <div className="line" />
         </div>
         <div className="section-content">
-          <div className="picture">
+          <div className="picture theme-border">
             <img src={profile} alt="Profile" />
           </div>
           <div className="bio">

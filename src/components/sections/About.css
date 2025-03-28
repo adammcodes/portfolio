@@ -1,0 +1,65 @@
+.About {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.About section {
+  margin: 0 6rem;
+  max-width: 78rem;
+}
+
+.About .section-title .title {
+  min-width: 9rem;
+  max-width: 9rem;
+  display: inline-block;
+}
+
+.About .picture {
+  padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+  margin-top: 0.3rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.About .picture img {
+  border-radius: 4px;
+  max-width: 15rem;
+}
+
+.About .bio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.About .bio p {
+  margin-top: 0;
+  width: 100%;
+}
+
+.About .technologies {
+  max-width: 30rem;
+  margin: 0.5rem 0 2rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .About section {
+    margin: 0 2.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .About .section-content {
+    flex-direction: column-reverse;
+  }
+
+  .About section {
+    max-width: 78rem;
+  }
+
+  .About .picture {
+    margin-right: 0;
+  }
+}

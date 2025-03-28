@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import logo from "../images/logo.png";
 
+import "./Nav.css";
+
 interface NavProps {
   view: string;
   position: number;
@@ -45,97 +47,91 @@ const Nav = ({ view, position, scrollTo }: NavProps) => {
     }
   };
 
+  console.log(view);
+
   return (
     <div
-      className={`fixed left-0 top-0 z-10 flex w-full items-start justify-between p-4 transition-all duration-500 ease-out border-b border-transparent h-14
-        ${
-          view !== "top"
-            ? "backdrop-blur-nav bg-dark-transparent border-light-1"
-            : ""
-        }
-        ${state.showDropdown ? "h-screen" : ""}`}
+      className={`Nav ${view === "top" ? "" : "pop"} ${
+        state.showDropdown ? "expand pop" : ""
+      }`}
     >
       {/* LOGO */}
-      <div className="flex items-center mx-2">
-        <a href="/" className="h-fit w-fit">
-          <img className="w-[78px] h-12" src={logo} alt="Portfolio Logo" />
+      <div className="nav-left">
+        <a href="/">
+          <img className="logo" src={logo} alt="Portfolio Logo" />
         </a>
       </div>
 
       {/* Menu Bars Icon - only visible in Mobile */}
       <i
-        className={`md:hidden flex text-2xl text-light-1 mt-2 mr-8 cursor-pointer hover:text-light-5
-          ${state.showDropdown ? "text-light-5" : ""}`}
-        onClick={toggleDropdown}
+        className={`fa fa-bars ${state.showDropdown ? "active" : ""}`}
+        onClick={() => toggleDropdown()}
       />
 
       {/* Desktop view nav bar */}
-      <div className="hidden md:flex items-center space-x-12 mx-2 pr-4">
+      <div className="nav-right">
         <button onClick={() => scrollTo("about")}>
-          <div className={`nav-item ${view === "about" ? "selected" : ""}`}>
+          <div
+            className={`nav-item about ${view === "about" ? "selected" : ""}`}
+          >
             ABOUT
           </div>
         </button>
         <button onClick={() => scrollTo("skills")}>
-          <div className={`nav-item ${view === "skills" ? "selected" : ""}`}>
+          <div
+            className={`nav-item skills ${view === "skills" ? "selected" : ""}`}
+          >
             SKILLS
           </div>
         </button>
         <button onClick={() => scrollTo("projects")}>
-          <div className={`nav-item ${view === "projects" ? "selected" : ""}`}>
+          <div
+            className={`nav-item projects ${
+              view === "projects" ? "selected" : ""
+            }`}
+          >
             PROJECTS
           </div>
         </button>
         <button onClick={() => scrollTo("contact")}>
-          <div className={`nav-item ${view === "contact" ? "selected" : ""}`}>
+          <div
+            className={`nav-item contact ${
+              view === "contact" ? "selected" : ""
+            }`}
+          >
             CONTACT
           </div>
         </button>
       </div>
 
       {/* Mobile view nav bar */}
-      <div
-        className={`absolute left-0 right-0 flex flex-col items-center justify-center transition-all duration-500 ease-out bg-dark-transparent backdrop-blur-nav
-          ${
-            state.showDropdown
-              ? "opacity-100 top-[5.5rem]"
-              : "opacity-0 -top-[55rem] pointer-events-none"
-          }`}
-      >
-        <a href="#about" onClick={handleClick} className="w-full text-center">
+      <div className="nav-dropdown">
+        <a href="#about" onClick={() => handleClick()}>
           <div
-            className={`nav-item text-2xl py-8 ${
-              view === "about" ? "selected" : ""
-            }`}
+            className={`nav-item about ${view === "about" ? "selected" : ""}`}
           >
             ABOUT
           </div>
         </a>
-        <a href="#skills" onClick={handleClick} className="w-full text-center">
+        <a href="#skills" onClick={() => handleClick()}>
           <div
-            className={`nav-item text-2xl py-8 ${
-              view === "skills" ? "selected" : ""
-            }`}
+            className={`nav-item skills ${view === "skills" ? "selected" : ""}`}
           >
             SKILLS
           </div>
         </a>
-        <a
-          href="#projects"
-          onClick={handleClick}
-          className="w-full text-center"
-        >
+        <a href="#projects" onClick={() => handleClick()}>
           <div
-            className={`nav-item text-2xl py-8 ${
+            className={`nav-item projects ${
               view === "projects" ? "selected" : ""
             }`}
           >
             PROJECTS
           </div>
         </a>
-        <a href="#contact" onClick={handleClick} className="w-full text-center">
+        <a href="#contact" onClick={() => handleClick()}>
           <div
-            className={`nav-item text-2xl py-8 ${
+            className={`nav-item contact ${
               view === "contact" ? "selected" : ""
             }`}
           >
@@ -146,10 +142,9 @@ const Nav = ({ view, position, scrollTo }: NavProps) => {
           href="https://resume.creddle.io/resume/6p0dgqbzwmq"
           target="_blank"
           rel="noreferrer"
-          onClick={handleClick}
-          className="w-full text-center"
+          onClick={() => handleClick()}
         >
-          <div className="nav-item resume text-2xl py-8">RESUME</div>
+          <div className="nav-item resume">RESUME</div>
         </a>
       </div>
     </div>

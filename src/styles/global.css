@@ -1,379 +1,58 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  html,
-  body {
-    @apply text-[18px] relative overflow-x-hidden;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply m-0 bg-dark-1 text-light-1 font-main antialiased flex justify-center items-center overflow-y-auto;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  a {
-    @apply no-underline;
-  }
-
-  img {
-    @apply select-none;
-    -webkit-user-drag: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-
-  ul {
-    @apply flex flex-wrap justify-start mt-2 p-0 max-h-80;
-  }
-
-  li {
-    @apply list-none text-sm w-52 my-1 mr-4 ml-0;
-  }
-
-  li::before {
-    content: "";
-    @apply inline-block h-2.5 w-2.5 bg-contain mr-2;
-    background-image: url("../images/bullet.png");
-  }
-
-  code {
-    @apply font-code text-primary text-sm;
-  }
-
-  section {
-    @apply mx-10 max-w-[80rem];
-  }
-
-  p {
-    @apply leading-6;
-  }
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  max-width: 100vw;
+  margin: 2rem 3rem 0 3rem;
+  min-height: 70vh;
+  min-width: 90%;
+  margin-bottom: 5rem;
 }
 
-@layer components {
-  .App {
-    @apply flex flex-col items-center justify-center;
-  }
-
-  .App #about,
-  .App #skills,
-  .App #projects,
-  .App #contact {
-    @apply mb-24;
-  }
-
-  .App .nav-container {
-    @apply h-0 overflow-visible sticky top-0 z-10;
-  }
-
-  .App .scroller {
-    @apply fixed flex items-center justify-center self-end h-20 w-20 right-12 bottom-12 rounded-full bg-blue backdrop-blur-md cursor-pointer opacity-70 transition-all duration-300 border-2 border-transparent scale-[0.8] bg-[url('../images/arrow.png')] bg-[length:2rem_2rem] bg-no-repeat -rotate-90;
-    background-position: 1.7rem 1.5rem;
-  }
-
-  .App .scroller:hover {
-    @apply opacity-100;
-  }
-
-  .App .scroller.hide {
-    @apply -bottom-40;
-  }
-
-  .App footer {
-    @apply w-full h-28 text-sm flex items-center justify-center;
-  }
-
-  .App footer span {
-    @apply font-code ml-1.5;
-  }
-
-  /* Media query for mobile */
-  @media (max-width: 640px) {
-    .App .scroller {
-      @apply scale-[0.6] right-8 bottom-12;
-    }
-  }
-
-  .view {
-    @apply flex justify-center items-center min-h-[70vh] min-w-[90%] mb-20 mx-12 mt-8 w-fit max-w-[100vw];
-  }
-
-  .code {
-    @apply font-code text-primary text-sm;
-  }
-
-  .section-title {
-    @apply font-bold text-2xl text-light-5 mb-8 flex items-center justify-start;
-  }
-
-  .section-title .line {
-    @apply ml-5 w-full border-b border-dark-4;
-  }
-
-  .section-title img {
-    @apply w-6 mr-4;
-  }
-
-  .section-content {
-    @apply flex justify-center items-start;
-  }
-
-  /* Custom scrollbar styles */
-  ::-webkit-scrollbar {
-    @apply h-1 w-1;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-light-1 rounded-2xl;
-  }
-
-  ::-webkit-scrollbar-corner {
-    @apply bg-dark-1;
-  }
-
-  /* Theme border mixin replacement */
-  .theme-border {
-    @apply border-2 border-dashed border-light-1 border-r-primary border-b-primary border-solid border-r border-b rounded p-4;
-  }
-
-  /* Projects Component Styles */
-  .Projects section {
-    @apply max-w-[78rem];
-  }
-
-  .Projects .section-title {
-    @apply ml-0.5;
-  }
-
-  .Projects .section-content {
-    @apply flex flex-row justify-between flex-wrap;
-  }
-
-  .ProjectItem {
-    @apply bg-dark-3 bg-no-repeat bg-cover bg-top rounded w-[28%] p-6 h-48 flex-shrink mb-7 border-2 border-dark-1 border-t-2 border-l-2 border-r border-b transition-all duration-300 cursor-pointer;
-    background-blend-mode: luminosity;
-    box-shadow: 0px 0px 100px theme("colors.dark-transparent") inset;
-  }
-
-  .ProjectItem:hover {
-    @apply theme-border p-6;
-    background-blend-mode: normal;
-    box-shadow: 0px 0px 10px theme("colors.dark-transparent") inset;
-  }
-
-  .ProjectItem header {
-    @apply flex justify-between items-center;
-  }
-
-  .ProjectItem img {
-    @apply w-4 self-end mb-1.5 opacity-50 transition-opacity duration-300;
-  }
-
-  .ProjectItem:hover img {
-    @apply opacity-100;
-  }
-
-  .ProjectItem .title {
-    @apply text-[1.4rem] font-bold transition-colors duration-300 text-light-2;
-  }
-
-  .ProjectItem:hover .title {
-    @apply text-light-5;
-  }
-
-  .ProjectItem .description {
-    @apply my-4 h-8 transition-colors duration-300;
-  }
-
-  .ProjectItem:hover .description {
-    @apply text-light-3;
-  }
-
-  .ProjectItem .technologies {
-    @apply flex flex-row flex-wrap h-24 content-start opacity-80 transition-opacity duration-300;
-  }
-
-  .ProjectItem:hover .technologies {
-    @apply opacity-100;
-  }
-
-  .ProjectItem .technologies li {
-    @apply w-28 text-light-2 transition-colors duration-300;
-  }
-
-  .ProjectItem:hover .technologies li {
-    @apply text-primary;
-  }
-
-  .Projects .gh-link a.code {
-    @apply transition-colors duration-100;
-  }
-
-  .Projects .gh-link a.code:hover {
-    @apply text-light-5;
-  }
-
-  .Projects .gh-link li {
-    @apply w-60;
-  }
-
-  /* Media Queries for Projects */
-  @media (max-width: 1200px) {
-    .ProjectItem {
-      @apply w-[43%] h-48;
-    }
-
-    .ProjectItem .title {
-      @apply justify-start;
-    }
-
-    .ProjectItem .title img {
-      @apply ml-4;
-    }
-  }
-
-  @media (max-width: 950px) {
-    .ProjectItem {
-      @apply w-[92%] h-36 mb-4;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .ProjectItem {
-      @apply w-[95%] h-64 mb-4;
-    }
-
-    .ProjectItem .description,
-    .ProjectItem .technologies {
-      @apply h-max;
-    }
-  }
-
-  /* Button Component Styles */
-  .Button {
-    @apply px-3.5 py-3 border border-primary rounded w-fit font-code text-primary text-sm transition-colors duration-300 select-none cursor-pointer hover:bg-primary-transparent;
-  }
-
-  /* Skills Component Styles */
-  .Skills section {
-    @apply max-w-[78rem];
-  }
-
-  .Skills .section-content {
-    @apply flex flex-row justify-between;
-  }
-
-  .SkillsItem {
-    @apply bg-dark-2 p-6 rounded w-[28%] h-[40rem] flex-shrink;
-  }
-
-  .SkillsItem:nth-child(2) ul.sublist li {
-    @apply w-max;
-  }
-
-  .SkillsItem ul {
-    @apply flex-col content-start;
-  }
-
-  .SkillsItem ul.list {
-    @apply h-40;
-  }
-
-  .SkillsItem ul.sublist {
-    @apply max-h-80;
-  }
-
-  .SkillsItem li {
-    @apply w-48;
-  }
-
-  .SkillsItem .divider {
-    @apply border-b border-light-1 my-4;
-  }
-
-  .SkillsItem .title {
-    @apply text-2xl font-bold text-light-5 flex justify-between items-center;
-  }
-
-  .SkillsItem .title img {
-    @apply h-5 w-5;
-  }
-
-  .SkillsItem .description {
-    @apply my-4;
-  }
-
-  /* Media Queries for Skills */
-  @media (max-width: 1200px) {
-    .Skills section {
-      @apply w-full;
-    }
-
-    .Skills .section-content {
-      @apply flex-col;
-    }
-
-    .SkillsItem {
-      @apply w-[93%] mb-4 h-fit;
-    }
-
-    .SkillsItem ul {
-      @apply flex-col content-start h-fit;
-    }
-
-    .SkillsItem ul.list {
-      @apply max-h-32;
-    }
-
-    .SkillsItem ul.sublist {
-      @apply max-h-44;
-    }
-
-    .SkillsItem .title {
-      @apply justify-start;
-    }
-
-    .SkillsItem .title img {
-      @apply ml-4;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .SkillsItem {
-      @apply w-[84vw];
-    }
-
-    .SkillsItem ul.list {
-      @apply max-h-40;
-    }
-
-    .SkillsItem ul.sublist {
-      @apply max-h-48;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .SkillsItem ul.list {
-      @apply h-auto max-h-fit;
-    }
-
-    .SkillsItem ul.sublist {
-      @apply max-h-fit;
-    }
-  }
-
-  @media (max-width: 340px) {
-    .SkillsItem ul li {
-      @apply text-xs w-max;
-    }
-  }
+.code {
+  font-family: "Roboto Mono", monospace;
+  color: #06f7e7;
+  font-size: 0.9rem;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--light-5);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section-title .line {
+  margin-left: 1.3rem;
+  width: 100%;
+  border-bottom: 0.5px solid var(--dark-4);
+}
+
+.section-title img {
+  width: 1.5rem;
+  margin-right: 1rem;
+}
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.theme-border {
+  border-color: var(--light-1) var(--primary) var(--primary) var(--light-1);
+  border-style: dashed solid solid dashed;
+  border-width: 2px 1px 1px 2px;
+  border-radius: 4px;
+  padding: 1rem;
 }

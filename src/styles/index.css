@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+html,
+body {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: var(--dark-1);
+  color: var(--light-1);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: overlay;
+}
+
+body::-webkit-scrollbar {
+  height: 0.25rem;
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--light-1);
+  border-radius: 15px;
+}
+body::-webkit-scrollbar-corner {
+  background: var(--dark-1);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+  padding: 0;
+  max-height: 20rem;
+}
+
+li {
+  list-style: none;
+  font-size: 0.8rem;
+  width: 13rem;
+  margin: 0.25rem 1rem 0.25rem 0;
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-size: contain;
+  background-image: url("../images/bullet.png");
+  margin-right: 0.5rem;
+}
+
+code {
+  font-family: "Roboto Mono", source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+section {
+  margin: 0 2.5rem;
+  max-width: 80rem;
+}
+
+/* Define css variables */
+:root {
+  --red: #ff194b;
+  --yellow: #ffde20;
+  --green: #13ff6d;
+  --blue: #3ea8ff;
+  --purple: #bd6dff;
+  --primary: #06f7e7;
+  --primary-transparent: #00ffff15;
+  --black: #040404;
+  --white: #f5f5f5;
+  --dark-1: #080914;
+  --dark-2: #101225;
+  --dark-3: #171a33;
+  --dark-4: #24284d;
+  --dark-transparent: #0809147e;
+  --light-1: #8a8e9e;
+  --light-2: #b7bbcc;
+  --light-3: #c0c0c0;
+  --light-4: #d0d0d0;
+  --light-5: #e0e0e0;
+  --light-transparent: #ffffff3a;
+
+  --font-code: "Roboto Mono", monospace;
+  --font-main: "Roboto", sans-serif;
+}

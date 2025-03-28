@@ -1,0 +1,78 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App #about,
+.App #skills,
+.App #projects,
+.App #contact {
+  margin-bottom: 6rem;
+}
+
+.App .nav-container {
+  height: 0;
+  overflow: visible;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.App .scroller {
+  align-self: flex-end;
+  height: 5rem;
+  width: 5rem;
+  right: 3rem;
+  bottom: 3rem;
+  border-radius: 100%;
+  background-color: var(--blue);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  position: fixed;
+  overflow: visible;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  zoom: 80%;
+  background-image: url("../images/arrow.png");
+  background-position-x: 1.7rem;
+  background-position-y: 1.5rem;
+  background-size: 2rem 2rem;
+  background-repeat: no-repeat;
+  transform: rotate(-90deg);
+}
+
+.App .scroller:hover {
+  opacity: 1;
+}
+
+.App .scroller.hide {
+  bottom: -10rem;
+}
+
+.App footer {
+  width: 100%;
+  height: 7rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App footer span {
+  font-family: var(--font-code);
+  margin-left: 0.4rem;
+}
+
+@media screen and (max-width: 640px) {
+  .App .scroller {
+    zoom: 60%;
+    right: 2rem;
+    bottom: 3rem;
+  }
+}
