@@ -80,7 +80,7 @@ const App = () => {
         <div className="arrow" />
       </div>
       <footer>
-        &copy; <span>2023 Adam Marsala</span>
+        &copy; <span>2025 Adam Marsala</span>
       </footer>
     </div>
   );
