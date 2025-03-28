@@ -1,5 +1,3 @@
-import "./Button.scss";
-
 interface ButtonProps {
   text: string;
   link?: string;

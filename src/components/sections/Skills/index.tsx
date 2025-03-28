@@ -1,4 +1,3 @@
-import "./index.scss";
 import arrow from "../../../images/arrow.png";
 import SkillsItem from "./SkillsItem";
 import development from "../../../images/development.png";

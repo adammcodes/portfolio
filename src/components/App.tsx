@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import "./App.scss";
 import Nav from "./Nav";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -13,10 +12,10 @@ interface AppState {
 }
 
 interface Refs {
-  about: React.RefObject<HTMLDivElement | null>;
-  skills: React.RefObject<HTMLDivElement | null>;
-  projects: React.RefObject<HTMLDivElement | null>;
-  contact: React.RefObject<HTMLDivElement | null>;
+  about: React.RefObject<HTMLDivElement>;
+  skills: React.RefObject<HTMLDivElement>;
+  projects: React.RefObject<HTMLDivElement>;
+  contact: React.RefObject<HTMLDivElement>;
 }
 
 const App = () => {
@@ -34,8 +33,9 @@ const App = () => {
     contact: useRef<HTMLDivElement>(null),
   };
 
-  const scrollTo = (ref: keyof Refs) => {
-    refs[ref].current?.scrollIntoView();
+  const scrollTo = (section: string) => {
+    const ref = refs[section as keyof Refs];
+    ref.current?.scrollIntoView();
   };
 
   const handleScroll = () => {

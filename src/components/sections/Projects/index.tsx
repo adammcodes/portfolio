@@ -1,4 +1,3 @@
-import "./index.scss";
 import arrow from "../../../images/arrow.png";
 import ProjectItem from "./ProjectItem";
 

@@ -11,4 +11,15 @@ export default defineConfig({
     outDir: "build",
     sourcemap: true,
   },
+  css: {
+    postcss: "./postcss.config.cjs",
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          $dark-transparent: rgba(10, 25, 47, 0.85);
+          $primary-transparent: rgba(100, 255, 218, 0.1);
+        `,
+      },
+    },
+  },
 });
