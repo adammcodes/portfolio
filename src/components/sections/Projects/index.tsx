@@ -48,18 +48,17 @@ const Projects = () => {
       background: shaiandadam,
     },
     {
-      title: "Lockdown",
+      title: "Zombies",
       description: "A 2D Top-Down shooter game where zombies have taken over",
       technologies: [
         "React",
         "Phaser.js",
         "Tiled",
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "Webpack",
+        "TypeScript",
+        "Vite",
+        "Netlify",
       ],
-      project: "https://github.com/MagicMark5/lockdown2",
+      project: "https://adammcodes-zombies.netlify.app/",
       background: lockdown,
     },
   ];

@@ -47,8 +47,6 @@ const Nav = ({ view, position, scrollTo }: NavProps) => {
     }
   };
 
-  console.log(view);
-
   return (
     <div
       className={`Nav ${view === "top" ? "" : "pop"} ${

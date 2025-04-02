@@ -35,7 +35,6 @@ const Skills = () => {
         "Express",
         "PostgreSQL",
         "Jest",
-        "jQuery",
         "Git",
       ],
     },
@@ -52,7 +51,7 @@ const Skills = () => {
         "Freelancing",
       ],
       sublabel: "Design & content creation tools:",
-      sublist: ["Adobe Illustrator", "Figma", "Gimp", "Tiled", "Piskell"],
+      sublist: ["Adobe Illustrator", "Figma", "Tiled", "Piskell"],
     },
     {
       img: rocket,
@@ -60,11 +59,7 @@ const Skills = () => {
       description:
         "I love figuring out the best ways to automate things and make work easier for my team.",
       label: "CRM tool I have experience in:",
-      list: [
-        "SFMC (Salesforce Marketing Cloud)",
-        "Veeva Vault/Veeva CRM",
-        "HubSpot",
-      ],
+      list: ["Salesforce", "Veeva", "HubSpot"],
       sublabel: "Project Management Tools",
       sublist: ["Teamwork", "Notion"],
     },
